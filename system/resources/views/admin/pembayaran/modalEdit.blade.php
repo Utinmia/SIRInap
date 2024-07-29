@@ -15,7 +15,7 @@
                     <div class="form-group">
                         <label>ID Reservasi</label>
                         <select id="edit_id_reservasi" name="id_reservasi" class="single-select" required>
-                            <option value="">Pilih Reservasi</option>
+                            <option value="">Pilih Reservasi</option>   
                             @foreach ($list_reservasi as $reservasi)
                                 <option value="{{ $reservasi->id_reservasi }}">{{ $reservasi->id_reservasi }} - {{ $reservasi->user->nama }}</option>
                             @endforeach
