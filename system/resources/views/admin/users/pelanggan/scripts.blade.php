@@ -54,15 +54,15 @@
                 required: "Data tidak boleh kosong"
             },
             email: {
-                required: "Data tidak boleh kosong"
+                required: "Data tidak boleh kosong",
                 email: "Silahkan isi alamat email yang valid"
             },
             password: {
-                required: "Data tidak boleh kosong"
+                required: "Data tidak boleh kosong",
                 minlength: "Password harus terdiri dari minimal 3 karakter"
             },
             password_confirmation: {
-                required: "Data tidak boleh kosong"
+                required: "Data tidak boleh kosong",
                 equalTo: "Password dan konfirmasi password tidak cocok"
             },
             tgl_lahir: {
@@ -140,15 +140,15 @@
                 required: "Data tidak boleh kosong"
             },
             email: {
-                required: "Data tidak boleh kosong"
+                required: "Data tidak boleh kosong",
                 email: "Silahkan isi alamat email yang valid"
             },
             password: {
-                required: "Data tidak boleh kosong"
+                required: "Data tidak boleh kosong",
                 minlength: "Password harus terdiri dari minimal 3 karakter"
             },
             password_confirmation: {
-                required: "Data tidak boleh kosong"
+                required: "Data tidak boleh kosong",
                 equalTo: "Password dan konfirmasi password tidak cocok"
             },
             tgl_lahir: {

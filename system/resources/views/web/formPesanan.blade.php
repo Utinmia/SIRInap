@@ -284,7 +284,9 @@
                                                     <input type="file" name="bukti_bayar" id="bukti_bayar"
                                                         class="form-control">
                                                 </div>
-
+                                                <div class="alert alert-primary" role="alert">
+                                                    Pembayaran anda akan di proses maksimal 2 jam setelah melakukan pemesanan, jika belum di proses silahkan hubungi kami.
+                                                </div>
                                             </div>
                                             <div class="modal-footer">
                                                 <button type="button" class="btn btn-secondary"
