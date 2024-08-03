@@ -36,7 +36,7 @@ class AdminController extends Controller
             'status' => $request->status,
         ]);
 
-        return redirect('administrator/admin')->with('success', 'Data admin berhasil disimpan.');
+        return redirect('administrator/admin')->with('success', 'Data administrator berhasil disimpan.');
     }
 
     public function update(Request $request, $id)
@@ -59,7 +59,7 @@ class AdminController extends Controller
         $admin->status = $request->status;
         $admin->save();
 
-        return redirect('administrator/admin')->with('success', 'Data admin berhasil diubah.');
+        return redirect('administrator/admin')->with('success', 'Data administrator berhasil diubah.');
     }
 
     public function destroy($id)
@@ -67,6 +67,6 @@ class AdminController extends Controller
         $admin = Admin::findOrFail($id);
         $admin->delete();
 
-        return redirect('administrator/admin')->with('success', 'Data admin berhasil dihapus.');
+        return redirect('administrator/admin')->with('success', 'Data administrator berhasil dihapus.');
     }
 }

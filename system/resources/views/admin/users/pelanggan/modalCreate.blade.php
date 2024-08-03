@@ -35,7 +35,7 @@
                                 <input type="number" name="telepon" class="form-control" required>
                             </div>
                             <div class="form-group">
-                                <label><strong>Alamat</strong></label>
+                                <label>Alamat</label>
                                 <textarea name="alamat" class="form-control" rows="3" required></textarea>
                             </div>
                         </div>

@@ -92,9 +92,18 @@
                                             </a>
                                         </h3>
                                         <!-- /.villa-card__title -->
-                                        <div class="villa-card__price">Rp {{ $kamar->harga }} <span
-                                                class="villa-card__price__shift">/
-                                                Malam</span></div>
+
+                                        {{-- harga kamar --}}
+                                        <div class="villa-card__price">Rp {{ $kamar->harga }} 
+                                            <span class="villa-card__price__shift">/ Malam</span>
+                                        </div>
+
+                                        {{-- <div class="villa-card__price">Rp {{ number_format($kamar->harga,0,',','.') }} 
+                                            <span class="villa-card__price__shift">/ Malam</span>
+                                        </div> --}}
+                                        
+                                        {{-- end harga kamar --}}
+
                                         <ul class="list-unstyled villa-card__meta">
                                             @php
                                                 switch ($kamar->tipe_kamar) {

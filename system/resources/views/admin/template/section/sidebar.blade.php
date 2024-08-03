@@ -10,7 +10,12 @@
             <li><a href="#">Bokingan</a></li>
         </ul>
     </li> --}}
-
+    {{-- <li>
+        <a href="{{ url('administrator/about') }}" aria-expanded="false">
+            <i class="fas fa-hotel"></i>
+            <span class="nav-text">About</span>
+        </a>
+    </li> --}}
     <li>
         <a href="{{ url('administrator/kamar') }}" aria-expanded="false">
             <i class="fas fa-hotel"></i>

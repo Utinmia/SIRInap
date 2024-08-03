@@ -63,6 +63,10 @@
         /* .banner-form__control i{
             right: 20px;
         } */
+             /* warna backgronduntuk footer */
+        .background-black {
+            background-color: #132742 !important;
+        }
         .banner-two__title {
             font-size: 40px !important;
         }
@@ -88,9 +92,41 @@
             bottom: 0;
             background-repeat: no-repeat;
             background-size: cover;
-            background-image: url({{ url('public/landing/assets/images/custom') }}/img_4.jpeg);
+            background-image: url({{ url('public/landing/assets/images/custom/image-1.jpg') }});
             opacity: 0.3;
         }
+
+        /* Filter */
+        .banner-form__wrapper .villoz-btn {
+            /* background-color: var(--villoz-base, #537eac); */
+            background-color: #08963c;
+        }
+        .banner-form__wrapper .villoz-btn > i {
+            /* background-color: var(--villoz-base, #537eac); */
+            background-color: #08963c;
+        }
+        .banner-form__wrapper .villoz-btn > span {
+            /* background-color: var(--villoz-black, #132742); */
+            background-color: #066027;
+        }
+        /* End Filter */
+
+
+
+        /* Main Hider / Menu Mulai Pemesanan */
+        .main-header .villoz-btn {
+            /* background-color: #08963c; */
+        }
+        .main-header .villoz-btn > i {
+            /* background-color: #08963c; */
+        }
+        .main-header .villoz-btn > span {
+            /* background-color: #066027;
+            color: #fff; */
+        }
+        /* End Main Hider / Menu Mulai Pemesanan */
+
+        
 
         /* .villa-card__flash__label {
             background-color: #559E35 !important;
@@ -122,10 +158,12 @@
     <div class="custom-cursor__cursor"></div>
     <div class="custom-cursor__cursor-two"></div>
 
+    <!-- .preloader -->
     <div class="preloader">
         <div class="preloader__image" style="background-image: url({{ url('public') }}/logo/sirinap_2.png);"></div>
     </div>
     <!-- /.preloader -->
+
     <div class="page-wrapper">
         @include('layout.mainHeader')
 
@@ -133,9 +171,7 @@
 
         <!-- .main-footer -->
         <footer class="main-footer background-black">
-            <div class="main-footer__bg background-black"
-                style="background-image: url({{ url('public/landing') }}/assets/images/custom/image-1.jpg);">
-            </div>
+            <div class="main-footer__bg background-black"></div>
             <!-- /.main-footer__bg -->
             <div class="main-footer__top">
 
@@ -146,7 +182,7 @@
                         <img src="{{ url('public') }}/logo/sir-text.png" width="130" height="40"
                             alt="Villoz HTML Template">
                     </a>
-                    <div class="main-footer__social">
+                    {{-- <div class="main-footer__social">
                         <a href="https://twitter.com">
                             <i class="fab fa-twitter" aria-hidden="true"></i>
                             <span class="sr-only">Twitter</span>
@@ -163,7 +199,7 @@
                             <i class="fab fa-instagram" aria-hidden="true"></i>
                             <span class="sr-only">Instagram</span>
                         </a>
-                    </div>
+                    </div> --}}
                     <span style="color: white">© Copyright 2024 by <a href="#">Penginapan Nur Aini</a></span>
 
                 </div><!-- /.container -->

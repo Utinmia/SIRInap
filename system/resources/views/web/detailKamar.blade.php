@@ -22,6 +22,14 @@
             </ul><!-- /.thm-breadcrumb list-unstyled -->
             <h2 class="page-header__title">Detail Kamar</h2>
         </div><!-- /.container -->
+        {{-- filter --}}
+        {{-- <div class="banner-form__position wow fadeInUp" data-wow-delay="300ms">
+            <div class="container">
+
+                @include('layout.filter')
+
+            </div>
+        </div> --}}
     </section><!-- /.page-header -->
 
     <section class="villa-details-one">
@@ -48,7 +56,7 @@
                             $guest = '1';
                             $size = '4 m x 3 m';
                             $ringkasan = '<h5>Pengalaman Menginap yang Nyaman dan Praktis</h5>
-                                Kamar Single Bed kami dirancang khusus untuk Anda yang bepergian sendiri atau bersama pasangan.
+                                Kamar Single Bed kami dirancang khusus untuk Anda yang bepergian sendiri.
                                 Dengan suasana yang hangat dan fasilitas yang memadai, kami menjamin pengalaman menginap yang nyaman
                                 dan tenang';
                             break;
@@ -60,8 +68,7 @@
                             $size = '5 m x 4 m';
                             $ringkasan = '<h5>Pengalaman Menginap yang Luas dan Nyaman</h5>
                                 Kamar Double Bed kami ideal untuk keluarga kecil atau teman yang bepergian bersama. 
-                                Dirancang dengan sentuhan elegan dan kenyamanan, kamar ini menyediakan ruang yang lebih luas dan 
-                                fasilitas lengkap untuk pengalaman menginap yang tak terlupakan.';
+                                Dirancang dengan sentuhan elegan dan kenyamanan, kamar ini menyediakan ruang yang lebih luas.';
                             break;
 
                         // case 'Family Bed':
@@ -81,11 +88,17 @@
                     }
                 @endphp
 
+                {{-- TIPE KAMAR --}}
                 <div class="col-lg-8 col-xl-7">
                     <div class="villa-details-one__meta">
                         <div class="villa-details-one__meta__item">
                             <div class="villa-details-one__meta__icon"><span class="icon-bed"></span></div>
-                            <h5 class="villa-details-one__meta__number">{{ $bedrooms }}</h5>
+                            <h5 class="villa-details-one__meta__number">
+                                {{-- @php
+                                    echo $bedrooms;
+                                @endphp --}}
+                            {{ $bedrooms }}
+                        </h5>
                             <p class="villa-details-one__meta__name">Bedroom</p>
                         </div><!-- meta-item -->
                         <div class="villa-details-one__meta__item">
@@ -180,7 +193,7 @@
                             @if ($kamar->tipe_kamar == 'Single Bed')
                                 <li><span class="fas fa-check"></span>Tempat Tidur</li>
                             @elseif($kamar->tipe_kamar == 'Double Bed')
-                                <li><span class="fas fa-check"></span>Dua Tempat Tidur</li>
+                                <li><span class="fas fa-check"></span>Tempat Tidur Queen Size</li>
                             @elseif($kamar->tipe_kamar == 'Family Bed')
                                 <li><span class="fas fa-check"></span>Tempat Tidur Besar</li>
                             @endif
@@ -189,7 +202,6 @@
                             <li><span class="fas fa-check"></span>AC</li>
                             <li><span class="fas fa-check"></span>TV Cable</li>
                             <li><span class="fas fa-check"></span>WiFi Gratis</li>
-                            <li><span class="fas fa-check"></span>Meja Kerja</li>
                             <li><span class="fas fa-check"></span>Lemari Pakaian</li>
                         </ul>
 

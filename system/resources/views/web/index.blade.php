@@ -84,7 +84,7 @@
                 <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="300ms">
                     <div class="feature-two__item">
                         <div class="feature-two__item__icon"><span class="icon-house"></span></div>
-                        <h3 class="feature-two__item__title">Pilihan Kamar Berfariasi</h3>
+                        <h3 class="feature-two__item__title">Pilihan Kamar </h3>
                         <p class="feature-two__item__text">Nikmati berbagai pilihan kamar yang sesuai dengan kebutuhan dan
                             preferensi Anda.
                         </p>
@@ -94,136 +94,30 @@
         </div><!-- /.container -->
     </section><!-- /.feature-two -->
 
-    <section class="villa-two">
+    <section class="contact-map">
         <div class="container">
-            <div class="sec-title text-center">
-
-                <h6 class="sec-title__tagline">Daftar Kamar yang Kami Sewakan</h6><!-- /.sec-title__tagline -->
-
-                <h3 class="sec-title__title">Temukan kamar yang sempurna <br> untuk kebutuhan Anda di penginapan kami. </h3>
-                <!-- /.sec-title__title -->
-            </div><!-- /.sec-title -->
-            <div class="villa-two__carousel villoz-owl__carousel villoz-owl__carousel--with-shadow villoz-owl__carousel--basic-nav owl-carousel owl-theme"
-                data-owl-options='{
-                    "items": 1,
-                    "margin": 30,
-                    "loop": false,
-                    "smartSpeed": 700,
-                    "nav": false,
-                    "navText": ["<span class=\"fa fa-angle-left\"></span>","<span class=\"fa fa-angle-right\"></span>"],
-                    "dots": false,
-                    "autoplay": true,
-                    "responsive": {
-                        "0": {
-                            "items": 1
-                        },
-                        "768": {
-                            "items": 2
-                        },
-                        "1024": {
-                            "items": 3
-                        },
-                        "1400": {
-                            "items": 4
-                        }
-                    }
-                    }'>
-
-                @foreach ($list_kamar as $kamar)
-                    <div class="item">
-                        <div class="villa-card-two wow fadeInUp" data-wow-delay="400ms">
-                            <div class="villa-card__flash">
-                                <p class="villa-card__flash__label">{{ $kamar->status }}</p>
-                            </div>
-                            <div class="villa-card-two__image">
-                                @if ($kamar->galeri->isNotEmpty())
-                                    @php
-                                        $firstImage = $kamar->galeri->first()->url_gambar;
-                                        $imageUrl = url('system/storage/app/public/' . $firstImage);
-                                    @endphp
-                                    <img class="img_kamar" src="{{ $imageUrl }}" alt="Gambar Kamar">
-                                @else
-                                    <small>Belum ada gambar untuk kamar ini.</small>
-                                @endif
-                                {{-- <a href="javascript:void(0)" class="villa-card-two__like"><span
-                                    class="fas fa-heart"></span></a><!-- /.villa-card-two__like --> --}}
-                                <div class="villa-card-two__content">
-                                    <div class="villa-card-two__btns">
-                                        <a class="villoz-image-popup" href="#"
-                                            data-gallery-options='{
-                                            "items": [
-                                                @foreach ($kamar->galeri as $galeri)
-                                                    {
-                                                        "src": "{{ url('system/storage/app/public/' . $galeri->url_gambar) }}"
-                                                    }
-                                                    @if (!$loop->last)
-                                                        ,
-                                                    @endif 
-                                                @endforeach
-                                            ],
-                                            "gallery": {
-                                            "enabled": true
-                                            },
-                                            "type": "image"
-                                        }'>
-                                            <span class="icon-camera"></span>
-                                            <span class="villa-card-two__btns__count">{{ $kamar->galeri->count() }}</span>
-                                        </a>
-                                        {{-- <a class="video-popup" href="https://www.youtube.com/watch?v=0MuL8fd3pb8"><span
-                                            class="icon-video"></span></a> --}}
-                                    </div>
-                                    {{-- <div class="villa-card-two__ratings">
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                </div> --}}
-                                    <p class="villa-card-two__address">{{ $kamar->nomor_kamar }}</p>
-                                    <h3 class="villa-card-two__title"><a
-                                            href="{{ url('detail-kamar/' . $kamar->id_kamar) }}">{{ $kamar->tipe_kamar }}</a></h3>
-                                    <!-- /.villa-card-two__title -->
-                                    <div class="villa-card-two__price">Rp {{ number_format($kamar->harga,0,',','.') }}
-                                        <span class="villa-card-two__price__shift">/Malam</span>
-                                    </div>
-                                </div><!-- /.villa-card-two__content -->
-                            </div><!-- /.villa-card-two__image -->
-                            <ul class="list-unstyled villa-card-two__meta">
-                                @php
-                                    switch ($kamar->tipe_kamar) {
-                                        case 'Single Bed':
-                                            echo '
-                                                <li><span class="icon-bed"></span>1 bed</li>
-                                                <li><span class="icon-bath"></span>1 bath</li>
-                                                <li><span class="icon-users"></span>1 guest</li>';
-                                            break;
-
-                                        case 'Double Bed':
-                                            echo '
-                                                <li><span class="icon-bed"></span>2 beds</li>
-                                                <li><span class="icon-bath"></span>1 bath</li>
-                                                <li><span class="icon-users"></span>2 guests</li>';
-                                            break;
-
-                                        case 'Family Bed':
-                                            echo '
-                                                <li><span class="icon-bed"></span>1 bed</li>
-                                                <li><span class="icon-bath"></span>1 baths</li>
-                                                <li><span class="icon-users"></span>4 guests</li>';
-                                            break;
-
-                                        default:
-                                            echo 'Tipe kamar tidak diketahui';
-                                            break;
-                                    }
-                                @endphp
-                            </ul><!-- /.list-unstyled villa-card-two__meta -->
-                        </div><!-- /.villa-card-two -->
-                    </div><!-- /.item -->
-                @endforeach
-            </div><!-- /.row -->
-        </div><!-- /.container -->
-    </section><!-- /.villa-two -->
+            <div class="row">
+                <div class="col-lg-6">
+                    <h6>nur aini</h6>
+                    <img src="{{ url('system/storage/app/public/galeri/6691b7c516415.jpeg ') }}" alt="" width="100%">
+                    {{-- <img src="{{ url('system/storage/app/public/' . $galeri->url_gambar) }}" alt=""> --}}
+                    {{-- <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3987.7517392063123!2d109.97928807311534!3d-1.8441916364864999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e05184448de2413%3A0x1298cdf7147a4dd4!2s%22Nur%20Aini%22!5e0!3m2!1sen!2sid!4v1720832433766!5m2!1sen!2sid"
+                        width="100%" height="300px" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe> --}}
+                </div>
+                <div class="col-lg-6">
+                    <br>
+                    hfgfghghjkhhhhhhuuhhuhuuhuhuhuhuhhu buuhhuhuhuuhuh uhuhuhuhuh
+                    {{-- <iframe
+                        src="https://www.google.com/maps/embed?pb=!4v1720832735255!6m8!1m7!1sDl7MRuGFGSidc-fs_ThvVA!2m2!1d-1.844076196540858!2d109.981831454699!3f140.87848976914879!4f-3.0934843168551254!5f0.4000000000000002"
+                        width="100%" height="300px" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe> --}}
+                </div>
+            </div>
+            <!-- /.google-map -->
+        </div><!-- /.container-fluid -->
+    </section><!-- /.contact-map -->
 
     {{-- <section class="tab-two" style="background-image: url({{url('public/landing')}}/{{url('public/landing')}}/assets/images/backgrounds/tab-bg-2.jpg);">
         <div class="container tabs-box">

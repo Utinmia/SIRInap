@@ -60,14 +60,14 @@ class AdminAuthController extends Controller
             'email' => 'required|email|unique:users,email',
             'password' => 'required|string|min:3',
         ],[
-            'nama.required' => 'Nama wajib diisi.',
-            'jenis_kelamin.required' => 'Jenis kelamin wajib diisi.',
-            'tgl_lahir.required' => 'Taggal lahir wajib diisi.',
-            'telepon.required' => 'Telepon wajib diisi.',
-            'alamat.required' => 'Alamat wajib diisi.',
-            'email.required' => 'Alamat email wajib diisi.',
-            'email.email' => 'Masukkan alamat email yang valid.',
-            'password.required' => 'Kata sandi wajib diisi.'
+            'nama.required' => 'Data Tidak Boleh Kosong.',
+            'jenis_kelamin.required' => 'Data Tidak boleh kosong.',
+            'tgl_lahir.required' => 'Data tidak boleh kosong.',
+            'telepon.required' => 'Data tidak boleh kosong.',
+            'alamat.required' => 'Data tidak boleh kosong.',
+            'email.required' => 'Data tidak boleh kosong.',
+            'email.email' => 'Data tidak boleh kosong.',
+            'password.required' => 'Data tidak boleh kosong.'
         ]);
 
         // Simpan data ke dalam database

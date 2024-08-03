@@ -34,10 +34,10 @@ class Reservasi extends Model
         return $this->belongsToMany(Kamar::class, 'tb_reservasi_kamar', 'reservasi_id', 'kamar_id');
     }
 
-    public function layanans()
-    {
-        return $this->belongsToMany(Layanan::class, 'tb_reservasi_layanan', 'reservasi_id', 'layanan_id');
-    }
+    // public function layanans()
+    // {
+    //     return $this->belongsToMany(Layanan::class, 'tb_reservasi_layanan', 'reservasi_id', 'layanan_id');
+    // }
 
     public function pembayarans()
     {

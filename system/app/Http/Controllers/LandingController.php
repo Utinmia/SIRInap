@@ -85,4 +85,6 @@ class LandingController extends Controller
         $data['list_galeri'] = Galeri::all();
         return view('web.galeri', $data);
     }
+
+    
 }

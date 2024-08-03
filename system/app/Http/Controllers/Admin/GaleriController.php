@@ -76,7 +76,7 @@ class GaleriController extends Controller
         $galeri->save();
 
 
-        return redirect('administrator/galeri')->with('success', 'Gambar berhasil diperbarui.');
+        return redirect('administrator/galeri')->with('success', 'Gambar berhasil diubah.');
     }
 
     public function destroy($id)

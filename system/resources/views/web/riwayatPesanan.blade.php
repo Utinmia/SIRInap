@@ -9,7 +9,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
     <style>
-        .banner-form__control {
+        /* .banner-form__control {
             position: relative;
             padding: 0px 0px 10px 0px;
             border-right: 0px solid var(--villoz-border-color, #d6e2f0);
@@ -17,7 +17,7 @@
 
         .banner-form__control i {
             right: 0px;
-        }
+        } */
 
         .banner-form__wrapper {
             position: relative;

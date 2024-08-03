@@ -37,25 +37,6 @@
                             <p><i class="fas fa-envelope"></i> {{ session('user')->email }}</p>
                             <p><i class="fas fa-phone"></i> {{ session('user')->telepon }}</p>
                             <p><i class="fas fa-map-marker-alt"></i> {{ session('user')->alamat }}</p>
-
-                            <div class="team-details__social mb-0">
-                                <a href="https://twitter.com">
-                                    <i class="fab fa-twitter" aria-hidden="true"></i>
-                                    <span class="sr-only">Twitter</span>
-                                </a>
-                                <a href="https://facebook.com">
-                                    <i class="fab fa-facebook" aria-hidden="true"></i>
-                                    <span class="sr-only">Facebook</span>
-                                </a>
-                                <a href="https://pinterest.com">
-                                    <i class="fab fa-pinterest-p" aria-hidden="true"></i>
-                                    <span class="sr-only">Pinterest</span>
-                                </a>
-                                <a href="https://instagram.com">
-                                    <i class="fab fa-instagram" aria-hidden="true"></i>
-                                    <span class="sr-only">Instagram</span>
-                                </a>
-                            </div><!-- /.team-details__social -->
                             <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                 @csrf
                             </form>

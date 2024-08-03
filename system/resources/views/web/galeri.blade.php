@@ -25,6 +25,7 @@
 
     <section class="gallery-one gallery-one--page">
         <div class="container">
+
             <div class="text-center">
                 <ul class="list-unstyled post-filter gallery-one__filter__list">
                     <li class="active" data-filter=".filter-item"><span>all</span></li>
@@ -33,11 +34,14 @@
                     <li data-filter=".lain-lain"><span>Lain-lain</span></li>
                 </ul><!-- /.list-unstyledf -->
             </div><!-- /.text-center -->
+
             <div class="row filter-layout">
                 @foreach($list_galeri as $galeri)
-                @php
-                    $tipe_kamar = strtolower(str_replace(' ', '-', $galeri->kamar->tipe_kamar));
-                @endphp
+
+                    @php
+                        $tipe_kamar = strtolower(str_replace(' ', '-', $galeri->kamar->tipe_kamar));
+                    @endphp
+
                 <div class="col-md-6 col-lg-3 filter-item {{$tipe_kamar}}">
                     <div class="gallery-one__card">
                         <img src="{{ url('system/storage/app/public/' . $galeri->url_gambar) }}" alt="">
@@ -48,8 +52,10 @@
                         </div><!-- /.gallery-one__card__hover -->
                     </div><!-- /.gallery-one__card -->
                 </div><!-- /.col-md-6 col-lg-4 -->
+
                 @endforeach
             </div><!-- /.row -->
+
         </div><!-- /.container-fluid -->
     </section><!-- /.gallery-one -->
 @endsection

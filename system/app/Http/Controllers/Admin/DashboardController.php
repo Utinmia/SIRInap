@@ -14,10 +14,10 @@ class DashboardController extends Controller
 {
     public function index(){
         $data['list_reservasi'] = Reservasi::all();
-        $data['total_reservasi'] = Reservasi::all()->count();
-        $data['total_kamar'] = Kamar::all()->count();
-        $data['total_admin'] = Admin::all()->count();
-        $data['total_user'] = User::all()->count();
+        // $data['total_reservasi'] = Reservasi::all()->count();
+        // $data['total_kamar'] = Kamar::all()->count();
+        // $data['total_admin'] = Admin::all()->count();
+        // $data['total_user'] = User::all()->count();
         // $data['total_kamar_tersedia'] = Kamar::where('status', 'tersedia')->count();
         return view('admin.dashboard', $data);
     }

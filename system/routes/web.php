@@ -3,9 +3,7 @@
 // use App\Http\Controllers\admin\userController;
 use App\Http\Controllers\Admin\AdminController;
 use App\Http\Controllers\Admin\KamarController;
-use App\Http\Controllers\Admin\LayananController;
 use App\Http\Controllers\AdminAuthController;
-use App\Http\Controllers\InvoiceController;
 use App\Http\Controllers\PemesananController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
@@ -18,6 +16,7 @@ use App\Http\Controllers\Admin\GaleriController;
 use App\Http\Controllers\Admin\PelangganController;
 use App\Http\Controllers\Admin\PembayaranController;
 use App\Http\Controllers\Admin\ReservasiController;
+use App\Http\Controllers\Admin\AboutController;
 use App\Http\Controllers\KonfirmasiController;
 
 Route::get('/', [LandingController::class, 'index']);
@@ -25,6 +24,7 @@ Route::get('/hubungi-kami', [LandingController::class, 'hubungiKami']);
 Route::get('/fasilitas', [LandingController::class, 'fasilitas']);
 Route::get('/galeri', [LandingController::class, 'galeri']);
 Route::get('/kamar', [LandingController::class, 'kamar']);
+// Route::get('/about', [LandingController::class, 'about']);
 Route::get('/detail-kamar/{id}', [LandingController::class, 'detailKamar']);
 Route::get('/filter-kamar', [LandingController::class, 'filter'])->name('filter.kamar');
 
@@ -42,6 +42,7 @@ Route::group(['prefix' => 'administrator', 'middleware' => 'auth:admin'], functi
     Route::resource('/konsumen', PelangganController::class);
     Route::resource('/kamar', KamarController::class);
     Route::resource('/galeri', GaleriController::class);
+    Route::resource('/about', AboutController::class);
     // Route::resource('/layanan', LayananController::class);
     Route::resource('/pembayaran', PembayaranController::class);
     Route::resource('/reservasi', ReservasiController::class);
