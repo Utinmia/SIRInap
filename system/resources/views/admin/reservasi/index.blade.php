@@ -53,7 +53,7 @@
                                     @foreach ($list_reservasi as $reservasi)
                                         <tr>
                                             <td>{{ $reservasi->id_reservasi }}</td>
-                                            <td>{{ $reservasi->id_pelanggan }} - {{ $reservasi->user->nama }}</td>
+                                            <td>{{ $reservasi->user->nama }}</td>
                                             <td>
                                                 <ul>
                                                     @foreach ($reservasi->kamars as $kamar)

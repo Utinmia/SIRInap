@@ -27,7 +27,7 @@
                             <option value="">Pilih Kamar</option>
                             @foreach ($list_kamar as $kamar)
                                 <option value="{{ $kamar->id_kamar }}" data-harga="{{ $kamar->harga }}">
-                                    {{ $kamar->nomor_kamar }} - Rp {{ number_format( $kamar->harga, 0) }}
+                                    {{ $kamar->nomor_kamar }} - Rp {{ number_format( $kamar->harga, 0,',','.') }}
                                 </option>
                             @endforeach
                         </select>
