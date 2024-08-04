@@ -17,7 +17,7 @@
                     <div class="form-group">
                         <label for="id_kamar">Tag</label>
                         <select name="id_kamar" id="id_kamar" class="form-control" required>
-                            <option value="">Pilih Tag</option>
+                            <option value="" disabled>Pilih Tag</option>
                             @foreach ($list_kamar as $kamar)
                                 <option value="{{ $kamar->id_kamar }}"
                                     {{ $kamar->id_kamar == $galeri->id_kamar ? 'selected' : '' }}>

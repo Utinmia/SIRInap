@@ -131,35 +131,6 @@
             }
         });
 
-        $('#editForm').validate({
-            rules: {
-                id_kamar: {
-                    required: true
-                    // minlength: 2
-                }
-            },
-            messages: {
-                id_kamar: {
-                    required: "Silahkan pilih tag"
-                    // minlength: "Your name must consist of at least 2 characters"
-                }
-            },
-            errorClass: 'is-invalid',
-            validClass: 'is-valid',
-            errorPlacement: function(error, element) {
-                error.addClass('invalid-feedback');
-                element.closest('.form-group').append(error);
-            },
-            highlight: function(element) {
-                $(element).addClass('is-invalid').removeClass('is-valid');
-            },
-            unhighlight: function(element) {
-                $(element).addClass('is-valid').removeClass('is-invalid');
-            },
-            submitHandler: function(form) {
-                form.submit();
-            }
-        });
 
         $('#deleteModal').on('show.bs.modal', function(event) {
             var button = $(event.relatedTarget);

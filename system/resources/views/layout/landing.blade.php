@@ -99,15 +99,15 @@
         /* Filter */
         .banner-form__wrapper .villoz-btn {
             /* background-color: var(--villoz-base, #537eac); */
-            background-color: #08963c;
+            background-color: #132742;
         }
         .banner-form__wrapper .villoz-btn > i {
             /* background-color: var(--villoz-base, #537eac); */
-            background-color: #08963c;
+            background-color: #132742;
         }
         .banner-form__wrapper .villoz-btn > span {
             /* background-color: var(--villoz-black, #132742); */
-            background-color: #066027;
+            background-color: #517ca9;
         }
         /* End Filter */
 

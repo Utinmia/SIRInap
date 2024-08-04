@@ -98,8 +98,8 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-6">
-                    <h6>nur aini</h6>
-                    <img src="{{ url('system/storage/app/public/galeri/6691b7c516415.jpeg ') }}" alt="" width="100%">
+                    {{-- <h6>nur aini</h6> --}}
+                    <img src="{{ url('system/storage/app/public/galeri/66ae41d41ce68.jpeg ') }}" alt="" width="100%">
                     {{-- <img src="{{ url('system/storage/app/public/' . $galeri->url_gambar) }}" alt=""> --}}
                     {{-- <iframe
                         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3987.7517392063123!2d109.97928807311534!3d-1.8441916364864999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e05184448de2413%3A0x1298cdf7147a4dd4!2s%22Nur%20Aini%22!5e0!3m2!1sen!2sid!4v1720832433766!5m2!1sen!2sid"
@@ -107,8 +107,16 @@
                         referrerpolicy="no-referrer-when-downgrade"></iframe> --}}
                 </div>
                 <div class="col-lg-6">
-                    <br>
-                    hfgfghghjkhhhhhhuuhhuhuuhuhuhuhuhhu buuhhuhuhuuhuh uhuhuhuhuh
+                    <h4 class="text-center">TATA TERTIB PENGINAPAN</h4>
+                        <ol>
+                            <li>Tidak dibenarkan mengadakan segala bentuk perjudian.</li>
+                            <li>Tidak dibenarkan minum-minuman keras, dan narkoba. </li>
+                            <li>Menjaga etika dan norma. </li>
+                            <li>Tidak dibenarkan untuk pasangan yang bukan muhrim untuk menginap.</li>
+                            <li>Tidak dibenarkan untuk membawa segala bentuk senjata tajam.</li>
+                            <li>Diharapkan menjaga kebersihan dan kesopanan.</li>
+                            <li>Menjaga cara berpakaian dan bicara yang sopan di area penginapan.</li>
+                        </ol>
                     {{-- <iframe
                         src="https://www.google.com/maps/embed?pb=!4v1720832735255!6m8!1m7!1sDl7MRuGFGSidc-fs_ThvVA!2m2!1d-1.844076196540858!2d109.981831454699!3f140.87848976914879!4f-3.0934843168551254!5f0.4000000000000002"
                         width="100%" height="300px" style="border:0;" allowfullscreen="" loading="lazy"
